@@ -5,7 +5,6 @@ import 'package:kms/src/utils/app_const.dart';
 import 'package:kms/src/utils/routes/route-names.dart';
 import 'package:kms/src/widgets/app_listview_builder.dart';
 import 'package:kms/src/widgets/app_text.dart';
-import 'package:kms/src/widgets/star_widget.dart';
 
 class topSearch extends StatefulWidget {
   const topSearch({super.key});
@@ -94,15 +93,6 @@ class _topSearchState extends State<topSearch> {
                                 }),
                             child: Stack(
                               children: [
-                                // ColorFiltered(
-                                //   colorFilter: ColorFilter.mode(
-                                //     Colors.black.withOpacity(0.6),
-                                //     BlendMode.srcOver,
-                                //   ),
-                                //   child: Image.network(
-                                //     '${dotenv.env['IMAGE_SERVER']}${data[index]['image']}',
-                                //   ),
-                                // ),
                                 Positioned(
                                   left: 20,
                                   right: 20,
@@ -124,22 +114,6 @@ class _topSearchState extends State<topSearch> {
                                           ),
                                         ),
                                       ),
-                                      Row(
-                                        children: [
-                                          StarRating(
-                                              numberOfStars: data[index]['star']
-                                                  .toString()),
-                                          AppText(
-                                            txt: '(' +
-                                                data[index]['readers']
-                                                    .toString() +
-                                                ')',
-                                            size: 18,
-                                            weight: FontWeight.w700,
-                                            color: AppConst.white,
-                                          ),
-                                        ],
-                                      )
                                     ],
                                   ),
                                 ),

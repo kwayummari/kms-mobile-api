@@ -18,7 +18,7 @@ class Login extends StatefulWidget {
 }
 
 class _LoginState extends State<Login> {
-  TextEditingController name = TextEditingController();
+  TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
   bool marked = false;
   bool dont_show_password = true;
@@ -44,10 +44,10 @@ class _LoginState extends State<Login> {
               ),
               AppInputText(
                 textsColor: AppConst.black,
-                textfieldcontroller: name,
+                textfieldcontroller: email,
                 ispassword: false,
                 fillcolor: AppConst.white,
-                label: 'Name',
+                label: 'Email',
                 obscure: false,
                 icon: Icon(
                   Icons.person_2,
@@ -105,7 +105,7 @@ class _LoginState extends State<Login> {
                             return;
                           }
                           loginService()
-                              .login(context, name.text, password.text);
+                              .login(context, email.text, password.text);
                         },
                         label: 'LOGIN',
                         borderRadius: 5,

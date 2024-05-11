@@ -9,7 +9,6 @@ import 'package:kms/src/utils/routes/route-names.dart';
 import 'package:kms/src/widgets/app_base_screen.dart';
 import 'package:kms/src/widgets/app_listview_builder.dart';
 import 'package:kms/src/widgets/app_text.dart';
-import 'package:kms/src/widgets/star_widget.dart';
 
 class contentsByCategoryId extends StatefulWidget {
   var id;
@@ -99,21 +98,6 @@ class _contentsByCategoryIdState extends State<contentsByCategoryId> {
                                   ),
                                 ),
                               ),
-                              Row(
-                                children: [
-                                  StarRating(
-                                      numberOfStars:
-                                          data[index]['star'].toString()),
-                                  AppText(
-                                    txt: '(' +
-                                        data[index]['readers'].toString() +
-                                        ')',
-                                    size: 18,
-                                    weight: FontWeight.w700,
-                                    color: AppConst.white,
-                                  ),
-                                ],
-                              )
                             ],
                           ),
                         ),

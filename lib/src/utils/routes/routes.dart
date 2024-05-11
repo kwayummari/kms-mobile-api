@@ -10,7 +10,6 @@ import 'package:flutter/material.dart';
 import 'package:kms/src/screens/authentication/login.dart';
 import 'package:kms/src/screens/authentication/registration.dart';
 import 'package:kms/src/screens/splash/splash.dart';
-import 'package:kms/src/widgets/app_play_video.dart';
 
 final Map<String, WidgetBuilder> routes = {
   RouteNames.login: (context) => Login(),
@@ -34,15 +33,6 @@ final Map<String, WidgetBuilder> routes = {
     return contentsById(
       name: args?['name'],
       styleId: args?['styleId'],
-    );
-  },
-  RouteNames.videoPlayer: (context) {
-    final Map<String, dynamic>? args =
-        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>?;
-    return videoPlayer(
-      id: args?['content_id'],
-      title: args?['title'],
-      url: args?['url'],
     );
   },
   RouteNames.payment: (context) {
