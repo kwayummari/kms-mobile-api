@@ -1,16 +1,16 @@
-import 'package:gugu/src/screens/introduction/intro.dart';
-import 'package:gugu/src/screens/models/bottomNavigationBar/bottomNavigationBar.dart';
-import 'package:gugu/src/screens/models/contents/contents_by_category.dart';
-import 'package:gugu/src/screens/models/contents/contents_by_id.dart';
-import 'package:gugu/src/screens/models/dashboard/dashboard.dart';
-import 'package:gugu/src/screens/models/payment/payment.dart';
-import 'package:gugu/src/screens/models/profile/profile.dart';
-import 'package:gugu/src/utils/routes/route-names.dart';
+import 'package:kms/src/screens/introduction/intro.dart';
+import 'package:kms/src/screens/models/bottomNavigationBar/bottomNavigationBar.dart';
+import 'package:kms/src/screens/models/contents/contents_by_category.dart';
+import 'package:kms/src/screens/models/contents/contents_by_id.dart';
+import 'package:kms/src/screens/models/dashboard/dashboard.dart';
+import 'package:kms/src/screens/models/payment/payment.dart';
+import 'package:kms/src/screens/models/profile/profile.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
 import 'package:flutter/material.dart';
-import 'package:gugu/src/screens/authentication/login.dart';
-import 'package:gugu/src/screens/authentication/registration.dart';
-import 'package:gugu/src/screens/splash/splash.dart';
-import 'package:gugu/src/widgets/app_play_video.dart';
+import 'package:kms/src/screens/authentication/login.dart';
+import 'package:kms/src/screens/authentication/registration.dart';
+import 'package:kms/src/screens/splash/splash.dart';
+import 'package:kms/src/widgets/app_play_video.dart';
 
 final Map<String, WidgetBuilder> routes = {
   RouteNames.login: (context) => Login(),

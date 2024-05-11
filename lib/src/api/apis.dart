@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:gugu/src/widgets/app_snackbar.dart';
+import 'package:kms/src/widgets/app_snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:http/http.dart' as http;

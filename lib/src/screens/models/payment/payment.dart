@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
-import 'package:gugu/src/gateway/payment.dart';
-import 'package:gugu/src/provider/login-provider.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/widgets/app_base_screen.dart';
-import 'package:gugu/src/widgets/app_button.dart';
-import 'package:gugu/src/widgets/app_input_text.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/gateway/payment.dart';
+import 'package:kms/src/provider/login-provider.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/widgets/app_base_screen.dart';
+import 'package:kms/src/widgets/app_button.dart';
+import 'package:kms/src/widgets/app_input_text.dart';
+import 'package:kms/src/widgets/app_text.dart';
 import 'package:provider/provider.dart';
 
 class Payment extends StatefulWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/widgets/app_text.dart';
 
 class AppCourseDetails extends StatelessWidget {
   final Icon icon;

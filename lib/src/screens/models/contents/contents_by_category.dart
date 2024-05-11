@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:gugu/src/functions/moneyFormatter.dart';
-import 'package:gugu/src/gateway/content-by-category-id.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/utils/routes/route-names.dart';
-import 'package:gugu/src/widgets/app_base_screen.dart';
-import 'package:gugu/src/widgets/app_listview_builder.dart';
-import 'package:gugu/src/widgets/app_text.dart';
-import 'package:gugu/src/widgets/star_widget.dart';
+import 'package:kms/src/functions/moneyFormatter.dart';
+import 'package:kms/src/gateway/content-by-category-id.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
+import 'package:kms/src/widgets/app_base_screen.dart';
+import 'package:kms/src/widgets/app_listview_builder.dart';
+import 'package:kms/src/widgets/app_text.dart';
+import 'package:kms/src/widgets/star_widget.dart';
 
 class contentsByCategoryId extends StatefulWidget {
   var id;

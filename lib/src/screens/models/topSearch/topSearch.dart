@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gugu/src/gateway/categories.dart';
-import 'package:gugu/src/utils/animations/shimmers/available_courses.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/utils/routes/route-names.dart';
-import 'package:gugu/src/widgets/app_listview_builder.dart';
-import 'package:gugu/src/widgets/app_text.dart';
-import 'package:gugu/src/widgets/star_widget.dart';
+import 'package:kms/src/gateway/categories.dart';
+import 'package:kms/src/utils/animations/shimmers/available_courses.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
+import 'package:kms/src/widgets/app_listview_builder.dart';
+import 'package:kms/src/widgets/app_text.dart';
+import 'package:kms/src/widgets/star_widget.dart';
 
 class topSearch extends StatefulWidget {
   const topSearch({super.key});

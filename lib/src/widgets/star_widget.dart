@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
-import 'package:gugu/src/utils/app_const.dart';
+import 'package:kms/src/utils/app_const.dart';
 
 class StarRating extends StatelessWidget {
   final String numberOfStars;

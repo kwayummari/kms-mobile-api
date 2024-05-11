@@ -1,8 +1,8 @@
-import 'package:gugu/src/functions/clipPath.dart';
-import 'package:gugu/src/functions/slide.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/widgets/app_button.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/functions/clipPath.dart';
+import 'package:kms/src/functions/slide.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/widgets/app_button.dart';
+import 'package:kms/src/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
 class Slide extends StatelessWidget {

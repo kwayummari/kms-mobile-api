@@ -1,5 +1,5 @@
-import 'package:gugu/src/screens/introduction/slides.dart';
-import 'package:gugu/src/utils/app_const.dart';
+import 'package:kms/src/screens/introduction/slides.dart';
+import 'package:kms/src/utils/app_const.dart';
 import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 

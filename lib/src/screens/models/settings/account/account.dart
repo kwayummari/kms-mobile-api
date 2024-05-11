@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gugu/src/functions/splash.dart';
-import 'package:gugu/src/gateway/profile-service.dart';
-import 'package:gugu/src/screens/models/settings/account/info.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/widgets/app_base_screen.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/functions/splash.dart';
+import 'package:kms/src/gateway/profile-service.dart';
+import 'package:kms/src/screens/models/settings/account/info.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/widgets/app_base_screen.dart';
+import 'package:kms/src/widgets/app_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class account extends StatefulWidget {

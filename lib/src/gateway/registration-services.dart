@@ -1,10 +1,10 @@
 import 'dart:convert';
 
-import 'package:gugu/src/api/apis.dart';
-import 'package:gugu/src/provider/login-provider.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/utils/routes/route-names.dart';
-import 'package:gugu/src/widgets/app_snackbar.dart';
+import 'package:kms/src/api/apis.dart';
+import 'package:kms/src/provider/login-provider.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
+import 'package:kms/src/widgets/app_snackbar.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';

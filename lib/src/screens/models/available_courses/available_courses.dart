@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gugu/src/functions/moneyFormatter.dart';
-import 'package:gugu/src/gateway/categories.dart';
-import 'package:gugu/src/utils/animations/shimmers/available_courses.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/utils/routes/route-names.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/functions/moneyFormatter.dart';
+import 'package:kms/src/gateway/categories.dart';
+import 'package:kms/src/utils/animations/shimmers/available_courses.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
+import 'package:kms/src/widgets/app_text.dart';
 
 class availableCourses extends StatefulWidget {
   const availableCourses({Key? key}) : super(key: key);

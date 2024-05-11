@@ -1,5 +1,5 @@
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
 class AppButton extends StatelessWidget {

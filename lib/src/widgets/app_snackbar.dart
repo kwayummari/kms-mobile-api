@@ -1,4 +1,4 @@
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/widgets/app_text.dart';
 import 'package:flutter/material.dart';
 
 class AppSnackbar extends SnackBar {

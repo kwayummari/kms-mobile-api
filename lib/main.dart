@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
-import 'package:gugu/src/functions/createMaterialColor.dart';
-import 'package:gugu/src/provider/login-provider.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/utils/routes/route-names.dart';
-import 'package:gugu/src/utils/routes/routes.dart';
+import 'package:kms/src/functions/createMaterialColor.dart';
+import 'package:kms/src/provider/login-provider.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
+import 'package:kms/src/utils/routes/routes.dart';
 import 'package:provider/provider.dart';
 import 'package:responsive_framework/responsive_wrapper.dart';
 import 'package:responsive_framework/utils/scroll_behavior.dart';
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           ],
         ),
         debugShowCheckedModeBanner: false,
-        title: 'GUGU BEAUTY SALOON',
+        title: 'kms BEAUTY SALOON',
         theme: ThemeData(
             // timePickerTheme: Theme.of(context).primaryColor,
             cardColor: AppConst.primary,

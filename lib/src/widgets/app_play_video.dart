@@ -1,10 +1,10 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:gugu/src/utils/app_const.dart';
-import 'package:gugu/src/widgets/app_base_screen.dart';
-import 'package:gugu/src/widgets/app_text.dart';
-import 'package:gugu/src/widgets/app_video_player.dart';
+import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/widgets/app_base_screen.dart';
+import 'package:kms/src/widgets/app_text.dart';
+import 'package:kms/src/widgets/app_video_player.dart';
 
 class videoPlayer extends StatefulWidget {
   var id;

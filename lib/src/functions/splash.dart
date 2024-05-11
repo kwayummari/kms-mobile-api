@@ -1,4 +1,4 @@
-import 'package:gugu/src/utils/routes/route-names.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,11 +12,11 @@ class SplashFunction {
 
     await Future.delayed(Duration(seconds: 1), () {});
 
-      if (id.toString().isEmpty || id == null) {
-        Navigator.pushNamed(context, RouteNames.login);
-      } else {
-        Navigator.pushNamed(context, RouteNames.bottomNavigationBar);
-      }
+    if (id.toString().isEmpty || id == null) {
+      Navigator.pushNamed(context, RouteNames.login);
+    } else {
+      Navigator.pushNamed(context, RouteNames.bottomNavigationBar);
+    }
   }
 
   Future<void> getValidationData() async {
@@ -48,5 +48,4 @@ class SplashFunction {
     var r = sharedPreferences.getString('role');
     return r.toString();
   }
-
 }

@@ -1,6 +1,6 @@
-import 'package:gugu/src/utils/app_const.dart';
+import 'package:kms/src/utils/app_const.dart';
 import 'package:flutter/material.dart';
-import 'package:gugu/src/widgets/app_text.dart';
+import 'package:kms/src/widgets/app_text.dart';
 
 class AppInputText extends StatelessWidget {
   final TextEditingController? textfieldcontroller;
