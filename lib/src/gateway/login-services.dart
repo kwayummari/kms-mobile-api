@@ -36,6 +36,8 @@ class loginService {
           'fullname', newResponse['user']['fullname'].toString());
       await prefs.setString('id', newResponse['user']['id'].toString());
       await prefs.setString('role', newResponse['user']['role'].toString());
+      await prefs.setString(
+          'rolesName', newResponse['user']['name'].toString());
       Navigator.pushNamedAndRemoveUntil(
         context,
         RouteNames.bottomNavigationBar,

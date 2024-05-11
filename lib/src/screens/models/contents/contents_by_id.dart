@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kms/src/functions/printReceipt.dart';
 import 'package:kms/src/gateway/categories.dart';
 import 'package:kms/src/utils/animations/shimmers/available_courses.dart';
 import 'package:kms/src/utils/app_const.dart';

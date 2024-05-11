@@ -15,6 +15,7 @@ class dashboard extends StatefulWidget {
 
 class _dashboardState extends State<dashboard> {
   var fullname;
+  var roles;
   @override
   void initState() {
     getName();
@@ -24,9 +25,11 @@ class _dashboardState extends State<dashboard> {
   Future<String> getName() async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
-    var name = sharedPreferences.getString('name');
+    var name = sharedPreferences.getString('fullname');
+    var role = sharedPreferences.getString('rolesName');
     setState(() {
       fullname = name.toString();
+      roles = role.toString();
     });
     return name.toString();
   }
@@ -75,7 +78,7 @@ class _dashboardState extends State<dashboard> {
                       width: 20,
                     ),
                     AppText(
-                      txt: 'Welcome \n${fullname}',
+                      txt: 'Welcome \n${fullname} (${roles})',
                       size: 18,
                       weight: FontWeight.w600,
                       color: AppConst.white,
