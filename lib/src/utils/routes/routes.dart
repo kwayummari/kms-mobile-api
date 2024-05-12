@@ -1,4 +1,3 @@
-import 'package:kms/src/screens/introduction/intro.dart';
 import 'package:kms/src/screens/models/bottomNavigationBar/bottomNavigationBar.dart';
 import 'package:kms/src/screens/models/contents/contents_by_category.dart';
 import 'package:kms/src/screens/models/contents/contents_by_id.dart';
@@ -15,7 +14,6 @@ final Map<String, WidgetBuilder> routes = {
   RouteNames.login: (context) => Login(),
   RouteNames.registration: (context) => Registration(),
   RouteNames.splash: (context) => Splash(),
-  RouteNames.intro: (context) => IntroScreen(),
   RouteNames.dashboard: (context) => dashboard(),
   RouteNames.profile: (context) => profile(),
   RouteNames.bottomNavigationBar: (context) => bottomNavigation(),
