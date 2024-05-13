@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:kms/src/functions/splash.dart';
 import 'package:kms/src/gateway/profile-service.dart';
 import 'package:kms/src/screens/models/settings/account/info.dart';
 import 'package:kms/src/utils/app_const.dart';
@@ -16,21 +15,43 @@ class account extends StatefulWidget {
 
 class _accountState extends State<account> {
   var data;
-  void fetchData() async {
+  var fullname;
+  var roles;
+  @override
+  void initState() {
+    getName();
+    fetchData();
+    super.initState();
+  }
+
+  Future<String> getName() async {
     profileService ProfileService = profileService();
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
+    var name = sharedPreferences.getString('fullname');
+    var role = sharedPreferences.getString('rolesName');
     var id = sharedPreferences.getString('id');
     final datas = await ProfileService.profile(context, id!);
     setState(() {
+      fullname = name.toString();
+      roles = role.toString();
       data = datas['user'];
     });
+    return name.toString();
   }
 
-  @override
-  void initState() {
-    super.initState();
-    fetchData();
+  void fetchData() async {
+    
+    final SharedPreferences sharedPreferences =
+        await SharedPreferences.getInstance();
+    
+    var name = sharedPreferences.getString('fullname');
+    print(name);
+    
+    setState(() {
+      
+      fullname = name.toString();
+    });
   }
 
   @override
@@ -47,7 +68,7 @@ class _accountState extends State<account> {
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
               ),
               TextSpan(
-                text: '\n@${data[0]['full_name']}',
+                text: '\n@${fullname}',
                 style: TextStyle(
                   fontWeight: FontWeight.normal,
                   fontSize: 14,
