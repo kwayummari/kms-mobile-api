@@ -45,11 +45,11 @@ class _infoState extends State<info> {
                 style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
               ),
               TextSpan(
-                text: '\n@${data[0]['full_name']}',
+                text: '\n@${data[0]['fullname'].toString()}',
                 style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14,
-                ),
+                    fontWeight: FontWeight.normal,
+                    fontSize: 14,
+                    color: AppConst.black),
               ),
             ],
           ),
@@ -83,7 +83,7 @@ class _infoState extends State<info> {
                   ),
                   Spacer(),
                   AppText(
-                    txt: '@${data[0]['full_name']}',
+                    txt: '@${data[0]['fullname']}',
                     size: 15,
                     color: Colors.grey,
                   ),
@@ -121,7 +121,159 @@ class _infoState extends State<info> {
                   ),
                   Spacer(),
                   AppText(
-                    txt: data[0]['phone_number'],
+                    txt: data[0]['phone'],
+                    size: 15,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 15,
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Navigator.of(context).push(MaterialPageRoute(
+              //     builder: (context) => changePhonenumber(
+              //           phone: data[0]['phone'],
+              //         )));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
+                bottom: 20,
+              ),
+              child: Row(
+                children: [
+                  AppText(
+                    txt: 'Email',
+                    size: 15,
+                    weight: FontWeight.bold,
+                  ),
+                  Spacer(),
+                  AppText(
+                    txt: data[0]['email'],
+                    size: 15,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 15,
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Navigator.of(context).push(MaterialPageRoute(
+              //     builder: (context) => changePhonenumber(
+              //           phone: data[0]['phone'],
+              //         )));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
+                bottom: 20,
+              ),
+              child: Row(
+                children: [
+                  AppText(
+                    txt: 'Role',
+                    size: 15,
+                    weight: FontWeight.bold,
+                  ),
+                  Spacer(),
+                  AppText(
+                    txt: data[0]['roleName'],
+                    size: 15,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 15,
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Navigator.of(context).push(MaterialPageRoute(
+              //     builder: (context) => changePhonenumber(
+              //           phone: data[0]['phone'],
+              //         )));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
+                bottom: 20,
+              ),
+              child: Row(
+                children: [
+                  AppText(
+                    txt: 'Company',
+                    size: 15,
+                    weight: FontWeight.bold,
+                  ),
+                  Spacer(),
+                  AppText(
+                    txt: data[0]['companyName'],
+                    size: 15,
+                    color: Colors.grey,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Icon(
+                    Icons.arrow_forward_ios,
+                    color: Colors.grey,
+                    size: 15,
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              // Navigator.of(context).push(MaterialPageRoute(
+              //     builder: (context) => changePhonenumber(
+              //           phone: data[0]['phone'],
+              //         )));
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(
+                left: 15,
+                right: 15,
+                bottom: 20,
+              ),
+              child: Row(
+                children: [
+                  AppText(
+                    txt: 'Branch',
+                    size: 15,
+                    weight: FontWeight.bold,
+                  ),
+                  Spacer(),
+                  AppText(
+                    txt: data[0]['branchName'],
                     size: 15,
                     color: Colors.grey,
                   ),
