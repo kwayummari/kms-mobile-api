@@ -51,18 +51,18 @@ class _contentsByIdState extends State<contentsById> {
   @override
   Widget build(BuildContext context) {
     return AppBaseScreen(
-      appBar: AppBar(
-        title: AppText(
+      title: AppText(
           txt: widget.name,
           size: 20,
           weight: FontWeight.bold,
         ),
         centerTitle: true,
-      ),
       bgcolor: AppConst.white,
       isvisible: false,
       backgroundImage: false,
       backgroundAuth: false,
+      isFlexible: false,
+      showAppBar: true,
       child: data.isEmpty
           ? availableCoursesShimmerLoad(
               width: 400,

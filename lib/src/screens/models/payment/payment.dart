@@ -37,18 +37,18 @@ class _PaymentState extends State<Payment> {
   Widget build(BuildContext context) {
     final myProvider = Provider.of<MyProvider>(context);
     return AppBaseScreen(
-        appBar: AppBar(
-          title: AppText(
+        title: AppText(
             txt: widget.title,
             size: 20,
             weight: FontWeight.w800,
           ),
           centerTitle: true,
-        ),
         bgcolor: AppConst.white,
         isvisible: false,
         backgroundImage: false,
         backgroundAuth: false,
+        isFlexible: false,
+        showAppBar: true,
         child: Form(
           key: _formKey,
           child: Column(

@@ -41,15 +41,10 @@ class _accountState extends State<account> {
   }
 
   void fetchData() async {
-    
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
-    
     var name = sharedPreferences.getString('fullname');
-    print(name);
-    
     setState(() {
-      
       fullname = name.toString();
     });
   }
@@ -57,29 +52,31 @@ class _accountState extends State<account> {
   @override
   Widget build(BuildContext context) {
     return AppBaseScreen(
-      appBar: AppBar(
-        title: RichText(
-          textAlign: TextAlign.center,
-          text: TextSpan(
-            style: TextStyle(fontSize: 16, color: Colors.black),
-            children: <TextSpan>[
-              TextSpan(
-                text: 'Your account',
-                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
+      title: RichText(
+        textAlign: TextAlign.center,
+        text: TextSpan(
+          style: TextStyle(fontSize: 16, color: Colors.black),
+          children: <TextSpan>[
+            TextSpan(
+              text: 'Your account',
+              style: TextStyle(fontWeight: FontWeight.w900, fontSize: 15),
+            ),
+            TextSpan(
+              text: '\n@${fullname}',
+              style: TextStyle(
+                fontWeight: FontWeight.normal,
+                fontSize: 14,
               ),
-              TextSpan(
-                text: '\n@${fullname}',
-                style: TextStyle(
-                  fontWeight: FontWeight.normal,
-                  fontSize: 14,
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
-        centerTitle: true,
       ),
+      centerTitle: true,
+      isFlexible: false,
+      showAppBar: true,
       bgcolor: AppConst.white,
+      appBarBgColor: AppConst.white,
+      iconColor: AppConst.black,
       isvisible: false,
       backgroundImage: false,
       backgroundAuth: false,

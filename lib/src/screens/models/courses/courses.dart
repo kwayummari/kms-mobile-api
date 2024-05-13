@@ -14,19 +14,19 @@ class _coursesState extends State<courses> {
   @override
   Widget build(BuildContext context) {
     return AppBaseScreen(
-      appBar: AppBar(
-        title: AppText(
+      title: AppText(
           txt: 'Enrolled Courses',
           size: 20,
           weight: FontWeight.bold,
         ),
         centerTitle: true,
-      ),
       bgcolor: AppConst.white,
       isvisible: false,
       backgroundImage: false,
       backgroundAuth: false,
       padding: EdgeInsets.all(0),
+      isFlexible: false,
+      showAppBar: true,
       child: Column(
         children: [
           Divider(

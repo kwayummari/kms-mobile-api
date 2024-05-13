@@ -37,6 +37,8 @@ class _profileState extends State<profile> {
         isvisible: false,
         backgroundImage: false,
         backgroundAuth: false,
+        isFlexible: false,
+        showAppBar: false,
         child: Container(
           width: MediaQuery.of(context).size.height,
           decoration: BoxDecoration(

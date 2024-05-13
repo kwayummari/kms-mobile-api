@@ -24,15 +24,17 @@ class _settingsState extends State<settings> {
   @override
   Widget build(BuildContext context) {
     return AppBaseScreen(
-      appBar: AppBar(
-        title: AppText(
-          txt: 'Settings',
-          size: 20,
-          weight: FontWeight.bold,
-        ),
-        centerTitle: true,
+      title: AppText(
+        txt: 'Settings',
+        size: 20,
+        weight: FontWeight.bold,
       ),
+      centerTitle: true,
+      isFlexible: false,
+      showAppBar: true,
       bgcolor: AppConst.white,
+      appBarBgColor: AppConst.white,
+      iconColor: AppConst.black,
       isvisible: false,
       backgroundImage: false,
       backgroundAuth: false,

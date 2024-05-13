@@ -13,9 +13,9 @@ class SplashFunction {
     await Future.delayed(Duration(seconds: 1), () {});
 
     if (id.toString().isEmpty || id == null) {
-      Navigator.pushNamed(context, RouteNames.login);
+      Navigator.pushReplacementNamed(context, RouteNames.login);
     } else {
-      Navigator.pushNamed(context, RouteNames.bottomNavigationBar);
+      Navigator.pushReplacementNamed(context, RouteNames.bottomNavigationBar);
     }
   }
 

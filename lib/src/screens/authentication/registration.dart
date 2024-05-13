@@ -53,6 +53,8 @@ class _RegistrationState extends State<Registration> {
           color: AppConst.black,
         ),
       ),
+      isFlexible: false,
+      showAppBar: false,
       child: Form(
           key: _formKey,
           child: Column(

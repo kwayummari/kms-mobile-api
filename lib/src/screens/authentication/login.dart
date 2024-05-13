@@ -27,6 +27,8 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     final myProvider = Provider.of<MyProvider>(context);
     return AppBaseScreen(
+      isFlexible: true,
+      showAppBar: false,
       bgcolor: AppConst.white,
       isvisible: false,
       backgroundImage: false,

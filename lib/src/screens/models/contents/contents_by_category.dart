@@ -42,18 +42,18 @@ class _contentsByCategoryIdState extends State<contentsByCategoryId> {
   @override
   Widget build(BuildContext context) {
     return AppBaseScreen(
-      appBar: AppBar(
-        title: AppText(
+      title: AppText(
           txt: widget.title,
           size: 20,
           weight: FontWeight.bold,
         ),
         centerTitle: true,
-      ),
       bgcolor: AppConst.white,
       isvisible: false,
       backgroundImage: false,
       backgroundAuth: false,
+      isFlexible: false,
+      showAppBar: true,
       child: data.isEmpty
           ? CircularProgressIndicator()
           : AppListviewBuilder(
