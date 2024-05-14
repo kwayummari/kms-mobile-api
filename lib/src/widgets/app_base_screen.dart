@@ -1,3 +1,4 @@
+import 'package:flutter/widgets.dart';
 import 'package:kms/src/utils/app_const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -56,6 +57,19 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
     super.initState();
   }
 
+  String _getGreeting() {
+    var now = DateTime.now();
+    var hour = now.hour;
+
+    if (hour < 12) {
+      return 'Good morning';
+    } else if (hour < 18) {
+      return 'Good afternoon';
+    } else {
+      return 'Good evening';
+    }
+  }
+
   Future<String> getName() async {
     final SharedPreferences sharedPreferences =
         await SharedPreferences.getInstance();
@@ -70,6 +84,7 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
 
   @override
   Widget build(BuildContext context) {
+    String greeting = _getGreeting();
     return Scaffold(
       backgroundColor: widget.bgcolor ?? AppConst.black,
       drawer: Drawer(),
@@ -98,12 +113,13 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
                 ),
               ],
               flexibleSpace: widget.isFlexible == true
-                  ? Padding(
-                      padding: EdgeInsets.only(top: 30),
+                  ? Container(
+                      decoration:
+                          BoxDecoration(gradient: AppConst.primaryGradient),
                       child: Column(
                         children: [
                           SizedBox(
-                            height: 100,
+                            height: 120,
                           ),
                           Row(
                             children: [
@@ -111,28 +127,55 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
                                 width: 30,
                               ),
                               CircleAvatar(
-                                radius: 30,
+                                radius: 50,
                                 backgroundColor: AppConst.white,
-                                child: AppText(
-                                  txt: fullname == null
-                                      ? ''
-                                      : fullname
-                                          .split(' ')
-                                          .map((word) => word[0].toUpperCase())
-                                          .join(''),
-                                  size: 20,
-                                  weight: FontWeight.w900,
-                                  color: AppConst.primary,
+                                child: CircleAvatar(
+                                  backgroundColor: AppConst.primary,
+                                  radius: 45,
+                                  child: CircleAvatar(
+                                    backgroundColor: AppConst.brightWhite,
+                                    radius: 40,
+                                    child: AppText(
+                                      txt: fullname == null
+                                          ? ''
+                                          : fullname
+                                              .split(' ')
+                                              .map((word) =>
+                                                  word[0].toUpperCase())
+                                              .join(''),
+                                      size: 25,
+                                      weight: FontWeight.w700,
+                                      color: AppConst.white,
+                                    ),
+                                  ),
                                 ),
                               ),
                               SizedBox(
                                 width: 20,
                               ),
-                              AppText(
-                                txt: 'Welcome \n${fullname} (${roles})',
-                                size: 15,
-                                weight: FontWeight.w600,
-                                color: AppConst.white,
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Container(
+                                    width:
+                                        MediaQuery.of(context).size.width - 200,
+                                    child: Flexible(
+                                      child: AppText(
+                                        txt: '$greeting $fullname',
+                                        size: 20,
+                                        weight: FontWeight.w600,
+                                        color: AppConst.white,
+                                        overflow: TextOverflow.clip,
+                                      ),
+                                    ),
+                                  ),
+                                  AppText(
+                                    txt: '(${roles})',
+                                    size: 15,
+                                    weight: FontWeight.w600,
+                                    color: AppConst.white,
+                                  ),
+                                ],
                               ),
                               Spacer(),
                             ],
@@ -175,7 +218,7 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
               ),
               leadingWidth: 50, // Adjust this value according to your needs
               toolbarHeight: widget.isFlexible == true ? 200 : null,
-              backgroundColor: widget.appBarBgColor ?? AppConst.primary,
+              backgroundColor: widget.appBarBgColor ?? AppConst.transparent,
             )
           : null,
       body: SingleChildScrollView(

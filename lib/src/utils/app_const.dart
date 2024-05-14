@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 abstract class AppConst {
+  static Gradient primaryGradient = LinearGradient(
+    colors: [HexColor('#150572'), HexColor('#2eb2be')],
+    begin: Alignment.bottomCenter,
+    end: Alignment.topRight,
+  );
   static Color primary = HexColor('#150572');
   static Color red = Colors.red;
+  static Color brightWhite = HexColor('#2eb2be');
   static Color white = HexColor('#ffffff');
   static Color black = HexColor('#000000');
   static Color grey = Colors.grey;

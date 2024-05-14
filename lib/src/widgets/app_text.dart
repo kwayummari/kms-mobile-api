@@ -6,6 +6,7 @@ class AppText extends StatelessWidget {
   // final Widget child;
   final String? txt;
   final TextAlign? align;
+  final TextOverflow? overflow;
   var color;
   var weight;
   double size;
@@ -18,9 +19,9 @@ class AppText extends StatelessWidget {
       this.align,
       this.weight,
       this.textdecoration,
+      this.overflow,
       required this.size,
-      this.softWrap
-      })
+      this.softWrap})
       : super(key: key);
 
   @override
@@ -29,6 +30,7 @@ class AppText extends StatelessWidget {
       txt.toString(),
       textAlign: align ?? null,
       softWrap: softWrap,
+      overflow: overflow ?? null,
       style: TextStyle(
         decoration: textdecoration,
         color: color,

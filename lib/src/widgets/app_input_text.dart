@@ -1,3 +1,5 @@
+// ignore_for_file: body_might_complete_normally_nullable
+
 import 'package:kms/src/utils/app_const.dart';
 import 'package:flutter/material.dart';
 import 'package:kms/src/widgets/app_text.dart';
@@ -115,7 +117,6 @@ class AppInputText extends StatelessWidget {
               return null;
             } else if (value.isEmpty) {
               return "THis field cannot be empty";
-              ;
             }
           }
         },
