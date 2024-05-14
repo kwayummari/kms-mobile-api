@@ -1,7 +1,7 @@
-import 'package:flutter/widgets.dart';
 import 'package:kms/src/utils/app_const.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:kms/src/widgets/app_drawer.dart';
 import 'package:kms/src/widgets/app_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -87,7 +87,9 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
     String greeting = _getGreeting();
     return Scaffold(
       backgroundColor: widget.bgcolor ?? AppConst.black,
-      drawer: Drawer(),
+      drawer: Drawer(
+        child: appDrawer(),
+      ),
       appBar: widget.showAppBar == true
           ? AppBar(
               centerTitle: widget.centerTitle,
@@ -159,14 +161,12 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
                                   Container(
                                     width:
                                         MediaQuery.of(context).size.width - 200,
-                                    child: Flexible(
-                                      child: AppText(
-                                        txt: '$greeting $fullname',
-                                        size: 20,
-                                        weight: FontWeight.w600,
-                                        color: AppConst.white,
-                                        overflow: TextOverflow.clip,
-                                      ),
+                                    child: AppText(
+                                      txt: '$greeting $fullname',
+                                      size: 20,
+                                      weight: FontWeight.w600,
+                                      color: AppConst.white,
+                                      overflow: TextOverflow.clip,
                                     ),
                                   ),
                                   AppText(
