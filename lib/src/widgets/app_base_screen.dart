@@ -62,11 +62,11 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
     var hour = now.hour;
 
     if (hour < 12) {
-      return 'Good morning';
+      return 'Good morning ☀️';
     } else if (hour < 18) {
-      return 'Good afternoon';
+      return 'Good afternoon 🌞';
     } else {
-      return 'Good evening';
+      return 'Good evening 🌙';
     }
   }
 
@@ -87,9 +87,11 @@ class _AppBaseScreenState extends State<AppBaseScreen> {
     String greeting = _getGreeting();
     return Scaffold(
       backgroundColor: widget.bgcolor ?? AppConst.black,
-      drawer: Drawer(
-        child: appDrawer(),
-      ),
+      drawer: widget.showAppBar == true
+          ? Drawer(
+              child: appDrawer(),
+            )
+          : null,
       appBar: widget.showAppBar == true
           ? AppBar(
               centerTitle: widget.centerTitle,

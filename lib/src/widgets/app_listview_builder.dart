@@ -5,19 +5,19 @@ class AppListviewBuilder extends StatelessWidget {
   final int itemnumber;
   final Axis direction;
   final Widget Function(BuildContext context, int index) itemBuilder;
-  const AppListviewBuilder(
-      {Key? key,
-      this.direction = Axis.vertical,
-      this.disabled = false,
-      required this.itemnumber,
-      required this.itemBuilder,
-      })
-      : super(key: key);
+  const AppListviewBuilder({
+    Key? key,
+    this.direction = Axis.vertical,
+    this.disabled = false,
+    required this.itemnumber,
+    required this.itemBuilder,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return itemnumber != 0 // Check if itemnumber is not zero
+    return itemnumber != 0
         ? ListView.builder(
+            padding: EdgeInsets.all(0),
             scrollDirection: direction,
             physics: const BouncingScrollPhysics(),
             shrinkWrap: true,
