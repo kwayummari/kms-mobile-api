@@ -1,3 +1,4 @@
+import 'package:kms/src/screens/models/dashboard/cardStats.dart';
 import 'package:kms/src/utils/app_const.dart';
 import 'package:kms/src/widgets/app_base_screen.dart';
 import 'package:flutter/material.dart';
@@ -38,9 +39,7 @@ class _dashboardState extends State<dashboard> {
             SizedBox(
               height: 20,
             ),
-            SizedBox(
-              height: 20,
-            ),
+            CardsStatus()
             // availableCourses(),
             // SizedBox(
             //   height: 20,

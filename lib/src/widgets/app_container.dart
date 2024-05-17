@@ -5,7 +5,15 @@ class AppContainer extends StatelessWidget {
   final double? width;
   final double? height;
   final double bottom;
-  const AppContainer({Key? key, required this.child, this.width, this.height, required this.bottom})
+  final Decoration? decoration;
+  const AppContainer(
+      {Key? key,
+      required this.child,
+      this.width,
+      this.height,
+      this.decoration,
+      required this.bottom,
+      })
       : super(key: key);
 
   @override
@@ -13,8 +21,9 @@ class AppContainer extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      decoration: decoration,
       child: Padding(
-        padding:  EdgeInsets.fromLTRB(16, 0, 16, bottom),
+        padding: EdgeInsets.fromLTRB(16, 0, 16, bottom),
         child: child,
       ),
     );

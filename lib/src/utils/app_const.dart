@@ -14,6 +14,7 @@ abstract class AppConst {
   static Color black = HexColor('#000000');
   static Color grey = Colors.grey;
   static Color grey400 = Colors.grey.shade400;
+  static Color grey300 = Colors.grey.shade200;
   static Color gold = HexColor('#ecb337');
   static Color brown = HexColor('#452612');
   static Color whiteOpacity = Colors.white.withOpacity(0.8);
