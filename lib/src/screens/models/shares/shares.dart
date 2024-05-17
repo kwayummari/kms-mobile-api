@@ -3,30 +3,29 @@ import 'package:kms/src/utils/app_const.dart';
 import 'package:kms/src/widgets/app_base_screen.dart';
 import 'package:kms/src/widgets/app_text.dart';
 
-class courses extends StatefulWidget {
-  const courses({super.key});
+class Shares extends StatefulWidget {
+  const Shares({super.key});
 
   @override
-  State<courses> createState() => _coursesState();
+  State<Shares> createState() => _SharesState();
 }
 
-class _coursesState extends State<courses> {
+class _SharesState extends State<Shares> {
   @override
   Widget build(BuildContext context) {
     return AppBaseScreen(
-      title: AppText(
-          txt: 'Enrolled Courses',
-          size: 20,
-          weight: FontWeight.bold,
-        ),
-        centerTitle: true,
       bgcolor: AppConst.white,
-      isvisible: false,
-      backgroundImage: false,
-      backgroundAuth: false,
-      padding: EdgeInsets.all(0),
-      isFlexible: false,
-      showAppBar: true,
+        isvisible: false,
+        backgroundImage: false,
+        backgroundAuth: false,
+        padding: EdgeInsets.all(0),
+        isFlexible: true,
+        showAppBar: true,
+        title: AppText(
+          txt: 'Shares',
+          size: 20,
+          color: AppConst.white,
+        ),
       child: Column(
         children: [
           Divider(

@@ -4,14 +4,14 @@ import 'package:kms/src/widgets/app_base_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:kms/src/widgets/app_text.dart';
 
-class dashboard extends StatefulWidget {
-  const dashboard({Key? key}) : super(key: key);
+class Dashboard extends StatefulWidget {
+  const Dashboard({Key? key}) : super(key: key);
 
   @override
-  State<dashboard> createState() => _dashboardState();
+  State<Dashboard> createState() => _DashboardState();
 }
 
-class _dashboardState extends State<dashboard> {
+class _DashboardState extends State<Dashboard> {
   @override
   void initState() {
     super.initState();

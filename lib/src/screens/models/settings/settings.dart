@@ -5,14 +5,14 @@ import 'package:kms/src/widgets/app_base_screen.dart';
 import 'package:kms/src/widgets/app_text.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class settings extends StatefulWidget {
-  const settings({super.key});
+class Settings extends StatefulWidget {
+  const Settings({super.key});
 
   @override
-  State<settings> createState() => _settingsState();
+  State<Settings> createState() => _SettingsState();
 }
 
-class _settingsState extends State<settings> {
+class _SettingsState extends State<Settings> {
   Future<void> phonecall() async {
     final Uri launchUri = Uri(
       scheme: 'tel',

@@ -1,7 +1,10 @@
 // ignore_for_file: file_names, prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, prefer_typing_uninitialized_variables, avoid_print, curly_braces_in_flow_control_structures, depend_on_referenced_packages, library_private_types_in_public_api, import_of_legacy_library_into_null_safe
 
 import 'package:kms/src/screens/models/dashboard/dashboard.dart';
+import 'package:kms/src/screens/models/loan/loan.dart';
+import 'package:kms/src/screens/models/savings/savings.dart';
 import 'package:kms/src/screens/models/settings/settings.dart';
+import 'package:kms/src/screens/models/shares/shares.dart';
 import 'package:kms/src/utils/app_const.dart';
 import 'package:flutter/material.dart';
 
@@ -15,8 +18,11 @@ class bottomNavigation extends StatefulWidget {
 class _bottomNavigationState extends State<bottomNavigation> {
   int index = 0;
   final Screen = [
-    dashboard(),
-    settings(),
+    Dashboard(),
+    Shares(),
+    Savings(),
+    Loan(),
+    Settings(),
   ];
 
   @override
@@ -41,6 +47,12 @@ class _bottomNavigationState extends State<bottomNavigation> {
                 items: [
                   BottomNavigationBarItem(
                       icon: Icon(Icons.home), label: 'Home'),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.pie_chart), label: 'Shares'),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.savings), label: 'Savings'),
+                  BottomNavigationBarItem(
+                      icon: Icon(Icons.card_travel_rounded), label: 'Loan'),
                   BottomNavigationBarItem(
                       icon: Icon(Icons.settings_suggest_outlined),
                       label: 'My Account'),
