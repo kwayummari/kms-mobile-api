@@ -38,12 +38,45 @@ class _LoanState extends State<Loan> {
       child: Column(
         children: [
           LoanCards(),
-          // Flexible(
-          //   fit: FlexFit.loose,
-          //   child: Container(),
-          // ),
           AppButton(
-            onPress: () {},
+            onPress: () {
+              showModalBottomSheet(
+                context: context,
+                isScrollControlled: true,
+                backgroundColor: AppConst.transparent,
+                builder: (BuildContext context) {
+                  return FractionallySizedBox(
+                    heightFactor: 0.8, // Cover 80% of the screen height
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: AppConst.white, // Background color of the modal
+                        borderRadius: BorderRadius.only(
+                          topLeft: Radius.circular(20),
+                          topRight: Radius.circular(20),
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          SizedBox(height: 20),
+                          Text(
+                            'This is a modal that covers 80% of the screen height',
+                            style: TextStyle(
+                                fontSize: 16, fontWeight: FontWeight.bold),
+                          ),
+                          SizedBox(height: 20),
+                          ElevatedButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: Text('Close'),
+                          ),
+                        ],
+                      ),
+                    ),
+                  );
+                },
+              );
+            },
             label: 'New Loan Application',
             borderRadius: 20,
             textColor: AppConst.whiteOpacity,

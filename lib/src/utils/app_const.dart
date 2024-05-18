@@ -9,6 +9,7 @@ abstract class AppConst {
   );
   static Color primary = HexColor('#150572');
   static Color red = Colors.red;
+  static Color green = Colors.green;
   static Color brightWhite = HexColor('#2eb2be');
   static Color white = HexColor('#ffffff');
   static Color black = HexColor('#000000');

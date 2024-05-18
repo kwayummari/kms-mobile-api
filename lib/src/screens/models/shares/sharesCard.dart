@@ -6,14 +6,14 @@ import 'package:kms/src/widgets/app_listview_builder.dart';
 import 'package:kms/src/widgets/app_material.dart';
 import 'package:kms/src/widgets/app_text.dart';
 
-class SavingsCard extends StatefulWidget {
-  const SavingsCard({super.key});
+class SharesCard extends StatefulWidget {
+  const SharesCard({super.key});
 
   @override
-  State<SavingsCard> createState() => _SavingsCardState();
+  State<SharesCard> createState() => _SharesCardState();
 }
 
-class _SavingsCardState extends State<SavingsCard> {
+class _SharesCardState extends State<SharesCard> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -94,35 +94,13 @@ class _SavingsCardState extends State<SavingsCard> {
                                     child: Row(
                                       children: [
                                         AppText(
-                                          txt: 'Transaction Type',
+                                          txt: 'Date Purchased',
                                           size: 15,
                                           color: AppConst.black,
                                         ),
                                         Spacer(),
                                         AppText(
-                                          txt: 'Deposit',
-                                          size: 15,
-                                          color: AppConst.black,
-                                        ),
-                                      ],
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.only(
-                                        left: 20,
-                                        right: 20,
-                                        top: 10,
-                                        bottom: 5),
-                                    child: Row(
-                                      children: [
-                                        AppText(
-                                          txt: 'Transaction Date',
-                                          size: 15,
-                                          color: AppConst.black,
-                                        ),
-                                        Spacer(),
-                                        AppText(
-                                          txt: 'Oct 7, 2023',
+                                          txt: 'May 11, 2024',
                                           size: 15,
                                           color: AppConst.black,
                                         ),
@@ -184,11 +162,11 @@ class _SavingsCardState extends State<SavingsCard> {
                                         borderRadius: 20,
                                         textColor: AppConst.whiteOpacity,
                                         bcolor: AppConst.green),
-                                  )
+                                  ),
                                 ],
                               ),
                               bottom: 10,
-                              height: 230,
+                              height: 200,
                               width: MediaQuery.of(context).size.width,
                               decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(50),
