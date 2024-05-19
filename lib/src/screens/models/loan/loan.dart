@@ -3,7 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:kms/src/screens/models/loan/loanCards.dart';
 import 'package:kms/src/utils/app_const.dart';
+import 'package:kms/src/utils/routes/route-names.dart';
 import 'package:kms/src/widgets/app_base_screen.dart';
+import 'package:kms/src/widgets/app_base_stepper.dart';
 import 'package:kms/src/widgets/app_button.dart';
 import 'package:kms/src/widgets/app_text.dart';
 
@@ -40,41 +42,10 @@ class _LoanState extends State<Loan> {
           LoanCards(),
           AppButton(
             onPress: () {
-              showModalBottomSheet(
-                context: context,
-                isScrollControlled: true,
-                backgroundColor: AppConst.transparent,
-                builder: (BuildContext context) {
-                  return FractionallySizedBox(
-                    heightFactor: 0.8, // Cover 80% of the screen height
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: AppConst.white, // Background color of the modal
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          topRight: Radius.circular(20),
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          SizedBox(height: 20),
-                          Text(
-                            'This is a modal that covers 80% of the screen height',
-                            style: TextStyle(
-                                fontSize: 16, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(height: 20),
-                          ElevatedButton(
-                            onPressed: () {
-                              Navigator.of(context).pop();
-                            },
-                            child: Text('Close'),
-                          ),
-                        ],
-                      ),
-                    ),
-                  );
-                },
+              Navigator.pushNamed(
+                context,
+                RouteNames.loanApplication,
+                arguments: (_) => false,
               );
             },
             label: 'New Loan Application',

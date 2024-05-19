@@ -11,4 +11,5 @@ class RouteNames {
   static const String getContentsById = '/getContentsById';
   static const String videoPlayer = '/videoPlayer';
   static const String payment = '/payment';
+  static const String loanApplication = '/loanApplication';
 }
