@@ -11,5 +11,9 @@ class RouteNames {
   static const String getContentsById = '/getContentsById';
   static const String videoPlayer = '/videoPlayer';
   static const String payment = '/payment';
+  static const String user = '/user';
+  static const String loan = '/loan';
+  static const String savings = '/savings';
+  static const String shares = '/shares';
   static const String loanApplication = '/loanApplication';
 }

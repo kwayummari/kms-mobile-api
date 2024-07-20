@@ -38,11 +38,11 @@ class _LoginState extends State<Login> {
           child: Column(
             children: [
               SizedBox(
-                height: 90,
+                height: 20,
               ),
               Image.asset('assets/icon.png'),
               SizedBox(
-                height: 45,
+                height: 10,
               ),
               AppInputText(
                 textsColor: AppConst.black,
@@ -154,7 +154,7 @@ class _LoginState extends State<Login> {
               ),
               AppText(
                 txt:
-                    'By continuing you agree to Aurorawave Labs \n               Terms and Condition',
+                    'By continuing you agree to Smart Coba \n               Terms and Condition',
                 size: 15,
                 color: AppConst.primary,
               )

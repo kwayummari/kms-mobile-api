@@ -32,7 +32,6 @@ class _appDrawerState extends State<appDrawer> {
       data = datas['contents'];
       role = roleName;
     });
-    print(data);
   }
 
   @override
@@ -45,7 +44,7 @@ class _appDrawerState extends State<appDrawer> {
         ClipRRect(
           borderRadius: BorderRadius.circular(50),
           child: SizedBox.fromSize(
-            size: Size.fromRadius(50),
+            size: Size.fromRadius(80),
             child: Image.asset('assets/2.png', fit: BoxFit.fill),
           ),
         ),
@@ -58,7 +57,7 @@ class _appDrawerState extends State<appDrawer> {
           color: AppConst.primary,
         ),
         AppText(
-          txt: 'Aurorawave Labs Ltd',
+          txt: 'Smart Coba Ltd',
           size: 15,
           color: AppConst.black,
         ),
@@ -94,7 +93,34 @@ class _appDrawerState extends State<appDrawer> {
                                   color: AppConst.black,
                                 ),
                                 onTap: () {
-                                  // Handle submenu tap
+                                  if (subMenu['url'] == 'user')
+                                    Navigator.pushNamed(
+                                      context,
+                                      RouteNames
+                                          .user, // Ensure this matches the route name
+                                      arguments: (_) => false,
+                                    );
+                                  if (subMenu['url'] == 'loans')
+                                    Navigator.pushNamed(
+                                      context,
+                                      RouteNames
+                                          .loan, // Ensure this matches the route name
+                                      arguments: (_) => false,
+                                    );
+                                  if (subMenu['url'] == 'savings')
+                                    Navigator.pushNamed(
+                                      context,
+                                      RouteNames
+                                          .savings, // Ensure this matches the route name
+                                      arguments: (_) => false,
+                                    );
+                                  if (subMenu['url'] == 'shares')
+                                    Navigator.pushNamed(
+                                      context,
+                                      RouteNames
+                                          .shares, // Ensure this matches the route name
+                                      arguments: (_) => false,
+                                    );
                                 },
                               );
                             }).toList()
